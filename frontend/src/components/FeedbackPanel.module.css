@@ -1,0 +1,129 @@
+.panel {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.improvement {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.overallScore {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+.overallNum {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.overallLabel {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* Rings */
+.rings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+/* Sections */
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Filler */
+.fillerBox { border-color: var(--red); border-opacity: 0.4; }
+.fillerCount {
+  margin-left: auto;
+  background: var(--red-dim);
+  color: var(--red);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.8rem;
+}
+.fillerTags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+/* Two-col */
+.twoCol { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 640px) { .twoCol { grid-template-columns: 1fr; } }
+
+.list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.listItem {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  padding-left: 1rem;
+  position: relative;
+}
+.listItem::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.strengths { border-color: rgba(61, 220, 132, 0.25); }
+.improvements { border-color: rgba(245, 166, 35, 0.25); }
+
+/* Suggested */
+.suggestedBox { border-color: var(--blue); border-opacity: 0.3; }
+.suggestedText {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Retry */
+.retryRow { display: flex; justify-content: center; padding-top: 0.5rem; }
